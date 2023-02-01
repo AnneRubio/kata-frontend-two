@@ -1,0 +1,28 @@
+/* Importing font */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap');
+
+/* REMOVING SOMR DEFAULT BROWSER PARAMETERS */
+* {
+  /* remove cheaps from lists */
+  list-style: none;
+  box-sizing: border-box;
+}
+
+/* GENERAL STYLING */
+html {
+  font-size: 16px;
+}
+body {
+  height: 100vh;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1rem;
+  background-color: hsl(210, 60%, 98%);
+}
+.container {
+  max-width: 1200px;
+  height: 90%;
+  margin: 50px auto;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 15px;
+  padding: 3rem;
+}
