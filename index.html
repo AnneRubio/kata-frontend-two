@@ -19,51 +19,58 @@
       <nav role="navigation">
         <ul>
           <li>Notifications</li>
-          <li>3</li>
+          <li class="menu-notif">3</li>
         </ul>
-        <p>Mark all as read</p>
+        <p class="menu-status">Mark all as read</p>
       </nav>
     </header>
     <main role="main">
-      <div>
-        <!-- <img src="/assets/images/avatar-mark-webber.webp" alt="picture of user"> -->
-        <p><strong>Mark Webber</strong> reacted to your recent post <strong class="grey">My first tournament today!</strong></p><span></span>
-        <p>1m ago</p>
+      <div class="unread-notif">
+        <figure class="avatar"><img src="assets/images/avatar-mark-webber.webp" alt="Mark Webber pic"></figure>
+        <div>
+          <p><strong>Mark Webber</strong> reacted to your recent post <strong class="grey">My first tournament today!</strong></p><span></span>
+          <p>1m ago</p>
+        </div>
+      </div>
+      <div class="unread-notif">
+        <figure class="avatar"><img src="assets/images/avatar-angela-gray.webp" alt="Anglea Greay pic"></figure>
+        <div>
+          <p><strong>Angela Gray</strong> followed you</p><span></span>
+          <p>5m ago</p>
+        </div>
+      </div>
+      <div class="unread-notif">
+        <figure class="avatar"><img src="assets/images/avatar-jacob-thompson.webp" alt="Jacob Thompson pic"></figure>
+        <div>
+          <p>Jacob Thompson has joined your group <strong class="active">Chess Club</strong></p><span></span>
+          <p>1 day ago</p>
+        </div>
       </div>
       <div>
-        <!-- <img src="/assets/images/avatar-angela-gray.webp" alt="picture of user"> -->
-        <p><strong>Angela Gray</strong> followed you</p><span></span>
-        <p>5m ago</p>
+        <div class="comment-notif">
+          <figure class="avatar"><img src="assets/images/avatar-rizky-hasanuddin.webp" alt="Rizky Hasanuddin pic"></figure>
+          <div>
+            <p><strong>Rizky Hasanuddin</strong> sent you a private message</p>
+            <p>5 days ago</p>
+            <p class="comment-zone"> Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and I'm already having
+                lots of fun and improving my game.
+            </p>
+          </div>
+        </div>
       </div>
       <div>
-        <!-- <img src="/assets/images/avatar-jacob-thompson.webp" alt="picture of user"> -->
-        <p>Jacob Thompson has joined your group <strong class="active">Chess Club</strong></p><span></span>
-        <p>1 day ago</p>
-      </div>
-      <div>
-        <!-- <img src="/assets/images/avatar-rizky-hasanuddin.webp" alt="picture of user"> -->
-        <p><strong>Rizky Hasanuddin</strong> sent you a private message</p>
-        <p>5 days ago</p>
-        <label for="textfield"></label>
-        <textarea id="textfield" name="chess"
-                  rows="5" cols="33">
-                  Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and
-                  I'm already having lots of fun and improving my game.
-        </textarea>
-      </div>
-      <div>
-        <!-- <img src="/assets/images/avatar-kimberly-smith.webp" alt="picture of user"> -->
+        <figure class="avatar"><img src="assets/images/avatar-kimberly-smith.webp" alt="Kimberly Smith pic"></figure>
         <p><strong>Kimberly Smith</strong> commented on your picture</p>
-        <!-- <img src="/assets/images/image-chess.webp" alt="picture of a chess"> -->
+        <figure><img src="assets/images/image-chess.webp" alt="picture of a chess"></figure>
         <p>1 week ago</p>
       </div>
       <div>
-        <!-- <img src="/assets/images/avatar-nathan-peterson.webp" alt="picture of user"> -->
+        <figure class="avatar"><img src="assets/images/avatar-nathan-peterson.webp" alt="Nathan Peterson pic"></figure>
         <p><strong>Nathan Peterson</strong> reacted to your recent post <strong class="grey">end-game strategies to increase your win rate</strong></p>
         <p>2 weeks ago</p>
       </div>
       <div>
-        <!-- <img src="/assets/images/avatar-anna-kim.webp" alt="picture of user"> -->
+        <figure class="avatar"><img src="assets/images/avatar-anna-kim.webp" alt="Anna Kim pic"></figure>
         <p>2 weeks ago</p>
       </div>
     </main>

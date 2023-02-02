@@ -1,13 +1,18 @@
 /* Importing font */
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap');
 
-/* REMOVING SOMR DEFAULT BROWSER PARAMETERS */
+/* REMOVING SOME DEFAULT BROWSER PARAMETERS */
 * {
   /* remove cheaps from lists */
   list-style: none;
   box-sizing: border-box;
 }
-
+ul {
+  padding-left: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
 /* GENERAL STYLING */
 html {
   font-size: 16px;
@@ -19,10 +24,48 @@ body {
   background-color: hsl(210, 60%, 98%);
 }
 .container {
-  max-width: 1200px;
-  height: 90%;
+  max-width: 900px;
   margin: 50px auto;
   background-color: hsl(0, 0%, 100%);
   border-radius: 15px;
   padding: 3rem;
+}
+/*NAVBAR STYLE*/
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+ul > li {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-right: 1rem;
+}
+.menu-notif {
+  font-size: 0.75rem;
+  background-color:hsl(224, 21%, 14%);
+  padding: 3px 12px 5px 12px;
+  border-radius: 4px;
+  color: white;
+}
+.menu-status {
+  color: hsl(219, 14%, 63%);
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+/* MAIN STYLE*/
+.avatar > img {
+  width: 40px;
+}
+.unread-notif {
+  display: flex;
+  align-items: center;
+  background-color: hsl(211, 68%, 94%);
+  border-radius: 4px;
+  margin-top: 1rem;
+}
+.comment-notif {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
 }
