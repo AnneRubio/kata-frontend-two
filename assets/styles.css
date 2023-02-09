@@ -24,12 +24,16 @@ body {
   background-color: hsl(210, 60%, 98%);
 }
 .container {
-  max-width: 900px;
-  margin: 50px auto;
+  max-width: 750px;
+  margin: 40px auto;
   background-color: hsl(0, 0%, 100%);
   border-radius: 15px;
-  padding: 3rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
+
 /*NAVBAR STYLE*/
 nav {
   display: flex;
@@ -43,7 +47,7 @@ ul > li {
 }
 .menu-notif {
   font-size: 0.75rem;
-  background-color:hsl(224, 21%, 14%);
+  background-color:hsl(219, 85%, 26%);
   padding: 3px 12px 5px 12px;
   border-radius: 4px;
   color: white;
@@ -52,20 +56,67 @@ ul > li {
   color: hsl(219, 14%, 63%);
   font-weight: 500;
   font-size: 0.9rem;
+  cursor: pointer;
 }
+.menu-status:hover {
+  color: hsl(219, 85%, 26%);
+}
+
 /* MAIN STYLE*/
+.container p {
+  font-size: 0.9rem;
+  margin-bottom: 0.2rem;
+  margin-top: 0.2rem;
+  color: hsl(219, 14%, 63%);
+}
 .avatar > img {
   width: 40px;
 }
 .unread-notif {
   display: flex;
   align-items: center;
-  background-color: hsl(211, 68%, 94%);
+  background-color: hsl(210, 60%, 98%);
   border-radius: 4px;
   margin-top: 1rem;
 }
 .comment-notif {
   display: flex;
+  align-items: top;
+  margin-top: 1rem;
+}
+.comment-notif .comment-zone {
+  margin-top: 1rem;
+}
+.comment-notif .avatar {
+  margin-top: 0px;
+}
+.comment-zone {
+  border: solid 1px hsl(219, 14%, 63%);
+  border-radius: 6px;
+  padding: 1rem;
+  width: 95%;
+}
+.read-notif {
+  display: flex;
   align-items: center;
   margin-top: 1rem;
+}
+.chess-pic > img {
+  width: 50px;
+}
+.date {
+  color: hsl(219, 14%, 63%);
+  font-size: 0.9rem;
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
+}
+strong {
+  color: black;
+}
+.blue {
+  color: hsl(219, 85%, 26%);
+}
+
+span {
+  color: hsl(1, 90%, 64%);
 }
