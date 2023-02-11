@@ -103,6 +103,7 @@ ul > li {
 }
 .chess-pic > img {
   width: 50px;
+  cursor: pointer;
 }
 .date {
   color: hsl(219, 14%, 63%);
@@ -112,11 +113,18 @@ ul > li {
 }
 strong {
   color: black;
+  cursor: pointer;
+}
+strong:hover {
+  color: hsl(219, 85%, 26%);
 }
 .blue {
   color: hsl(219, 85%, 26%);
 }
-
-span {
+.gray {
+  color: hsl(219, 14%, 63%);
+}
+.dot {
   color: hsl(1, 90%, 64%);
+  display: inline;
 }
