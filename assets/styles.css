@@ -125,6 +125,8 @@ strong:hover {
   color: hsl(219, 14%, 63%);
 }
 .dot {
-  color: hsl(1, 90%, 64%);
-  display: inline;
+  background-color: hsl(1, 90%, 64%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
 }
