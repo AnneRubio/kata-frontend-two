@@ -1,5 +1,6 @@
 let markAllRead = document.querySelector(".menu-status");
 let notifCount = document.querySelector(".menu-notif");
+let markAsRead = document.querySelectorAll(".markRead");
 
 // listening an event on Mark All Read so on click:
 markAllRead.addEventListener("click", function() {
@@ -17,17 +18,24 @@ markAllRead.addEventListener("click", function() {
   });
 });
 
-let markRead = document.querySelectorAll(".markRead");
-markRead.forEach(function(element) {
-  element.addEventListener("click", function() {
-  let unreadNotif = document.querySelectorAll(".unread-notif");
-    unreadNotif.forEach((unreadNotif) => {
-    if (unreadNotif.style.backgroundColor != "white")  {
-      unreadNotif.style.backgroundColor = "white";
-      }
-    });
+// faire une fonction pour que le background soit enlevé 1 par 1 et non pour chaque item. A corriger ici
+function removeOneBackground (e) {
+  let nonReadNotif = document.querySelectorAll(".unread-notif");
+  nonReadNotif.forEach((nonReadNotif) => {
+    nonReadNotif.style.backgroundColor = "white";
+    if (this.style.backgroundColor != "white");
   });
-});
+};
+
+markAsRead.forEach((markRead) => markRead.addEventListener("click", removeOneBackground));
+
+  // let unreadNotif = document.querySelectorAll(".unread-notif");
+  //   unreadNotif.forEach((unreadNotif) => {
+  //   if (unreadNotif.style.backgroundColor != "white")  {
+  //     unreadNotif.style.backgroundColor = "white";
+  //     }
+  //   });
+
 
 //  listening an event on active names (markRead) so on click:
 // menu-notif -=1 if > 0 && lightblue backround color switches to white, if backrground == blue
