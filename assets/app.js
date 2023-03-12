@@ -1,11 +1,12 @@
 const markAllRead = document.querySelector(".menu-status");
 const unreadNotif = document.querySelectorAll(".unread-notif");
 
-// creating a function to remove dots from the web page
+// creating a function to remove orange dots
 function removeDots() {
   const notifDot = document.querySelectorAll(".dot");
   notifDot.forEach(function(dot) {
-    dot.classList.remove("dot");
+    // dot.classList.remove("dot");
+    dot.style.backgroundColor = "white";
   });
 };
 
@@ -27,17 +28,19 @@ markAllRead.addEventListener("click", function() {
   removeBlueBackground();
 });
 
-// storing each <strong/> tag in a variable equal to the event.currentTarget
-// to target that specific element that got clicked to remove blue background
-// and dot of that clicked element only (and not all)
+// storing each <strong/> tag as an event.currentTarget constant to target that
+// specific element that is clicked so it removes the blue background and orange
+// dot of that clicked element only (and not of each strong elements)
 function removeOneBlue(event) {
   const markOneReadThatGotClicked = event.currentTarget;
   markOneReadThatGotClicked.classList.remove("dot");
   markOneReadThatGotClicked.style.backgroundColor = "white";
-  console.log(markOneReadThatGotClicked);
+  // console.log(markOneReadThatGotClicked);
 };
 
-function decrease() {
+// turning counter as an Integer and back to String (textContent does only work
+// with strings) so on clik counter decreases by 1
+function decreaseCounterByOne() {
 let counter = document.querySelector(".menu-notif");
 let notifCounter = parseInt(counter.textContent);
 if (notifCounter > 0)
@@ -46,5 +49,6 @@ if (notifCounter > 0)
 };
 
 unreadNotif.forEach(function(notif) {
-  notif.addEventListener('click', removeOneBlue, decrease);
+  notif.addEventListener("click", removeOneBlue);
+  notif.addEventListener("click", decreaseCounterByOne);
 });
