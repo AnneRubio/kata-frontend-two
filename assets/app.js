@@ -1,10 +1,10 @@
 const markAllRead = document.querySelector(".menu-status");
-const markAsRead = document.querySelectorAll(".markRead");
+const unreadNotif = document.querySelectorAll(".unread-notif");
 
 // creating a function to remove dots from the web page
 function removeDots() {
   const notifDot = document.querySelectorAll(".dot");
-  notifDot.forEach((dot) => {
+  notifDot.forEach(function(dot) {
     dot.classList.remove("dot");
   });
 };
@@ -27,40 +27,24 @@ markAllRead.addEventListener("click", function() {
   removeBlueBackground();
 });
 
-// Not DRY code :(
-
-// creating a function to switch background one to white if current background is blue
-function removeBlueBackgroundOne() {
-  const unreadNotif1 = document.querySelector(".unread-notif1");
-    if (unreadNotif1.style.backgroundColor != "white");
-    unreadNotif1.style.backgroundColor = "white";
+// storing each <strong/> tag in a variable equal to the event.currentTarget
+// to target that specific element that got clicked to remove blue background
+// and dot of that clicked element only (and not all)
+function removeOneBlue(event) {
+  const markOneReadThatGotClicked = event.currentTarget;
+  markOneReadThatGotClicked.classList.remove("dot");
+  markOneReadThatGotClicked.style.backgroundColor = "white";
+  console.log(markOneReadThatGotClicked);
 };
-// listening an event on notif one to change its background if white
-const markRead1 = document.querySelector('.markRead1');
-markRead1.addEventListener('click', removeBlueBackgroundOne);
 
-// creating a function to switch background two to white if current background is blue
-function removeBlueBackgroundTwo() {
-  const unreadNotif2 = document.querySelector(".unread-notif2");
-    if (unreadNotif2.style.backgroundColor != "white");
-    unreadNotif2.style.backgroundColor = "white";
+function decrease() {
+let counter = document.querySelector(".menu-notif");
+let notifCounter = parseInt(counter.textContent);
+if (notifCounter > 0)
+  notifCounter -= 1;
+  counter.textContent = notifCounter.toString();
 };
-// listening an event on notif two to change its background if white
-const markRead2 = document.querySelector('.markRead2');
-markRead2.addEventListener('click', removeBlueBackgroundTwo);
 
-// creating a function to switch background three to white if current background is blue
-function removeBlueBackgroundThree() {
-  const unreadNotif3 = document.querySelector(".unread-notif3");
-    if (unreadNotif3.style.backgroundColor != "white");
-    unreadNotif3.style.backgroundColor = "white";
-};
-// listening an event on notif Three to change its background if white
-const markRead3 = document.querySelector('.markRead3');
-markRead3.addEventListener('click', removeBlueBackgroundThree);
-
-
-// listening an event on Mark As Read DOM elements so on click background turns white and Dot disappear (arrow function)
-// markAsRead.forEach((markRead) => markRead.addEventListener("click", removeDots);
-// markAsRead.forEach((markRead) => markRead.addEventListener("click", removeBlueBackground);
-
+unreadNotif.forEach(function(notif) {
+  notif.addEventListener('click', removeOneBlue, decrease);
+});
