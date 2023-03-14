@@ -130,3 +130,9 @@ strong:hover {
   height: 10px;
   border-radius: 50%;
 }
+.dot.hide {
+  background-color: white;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
