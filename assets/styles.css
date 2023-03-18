@@ -62,6 +62,14 @@ ul > li {
   color: hsl(219, 85%, 26%);
 }
 
+/* RESPONSIVE PAGE */
+@media screen and (max-width: 375px) {
+  .container {
+    width: 100%;
+    margin: auto;
+  }
+}
+
 /* MAIN STYLE*/
 .container p {
   font-size: 0.9rem;
